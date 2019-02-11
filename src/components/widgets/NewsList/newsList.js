@@ -6,7 +6,7 @@ import axios from 'axios';
 import { URL } from '../../../config';
 import styles from './newsList.css';
 import Button from '../Buttons/buttons';
-import CardInfo from '../CardInfo/cardinfo';
+import CardInfo from '../../widgets/CardInfo/cardinfo';
 
 class NewsList extends Component {
 
@@ -63,7 +63,7 @@ class NewsList extends Component {
                     <div>
                         <div className={styles.newsList_item}>
                             <Link to={`/articles/${item.id}`}>
-                                <CardInfo/>
+                                <CardInfo teams={this.state.teams} team={item.team} date={item.date}/>
                             <h2>{item.title}</h2>
                             </Link>
                         </div>
